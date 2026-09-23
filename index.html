@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio | Anira Putri Hidayat </title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8fc;
+      color: #18233f;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 248, 252, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-bottom: 1px solid #f0dce7;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #d75b91;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #18233f;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d75b91;
+    }
+
+    /* HOME */
+    .home {
+      min-height: 100vh;
+      padding: 130px 8% 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .home-content {
+      max-width: 850px;
+    }
+
+    .welcome {
+      color: #d75b91;
+      font-size: 14px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .home h1 {
+      font-size: clamp(45px, 8vw, 80px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .home h1 span {
+      color: #d75b91;
+    }
+
+    .home p {
+      color: #666d7e;
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* GENERAL SECTION */
+    section {
+      padding: 90px 8%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+    }
+
+    .title span {
+      color: #d75b91;
+    }
+
+    /* BIODATA */
+    .biodata {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid #f0dce7;
+      box-shadow: 0 10px 30px rgba(24, 35, 63, 0.06);
+    }
+
+    .biodata-item {
+      display: flex;
+      padding: 18px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .biodata-item:last-child {
+      border-bottom: none;
+    }
+
+    .biodata-item strong {
+      width: 220px;
+      color: #d75b91;
+    }
+
+    /* HOBI */
+    .hobby-container {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .hobby {
+      background: #f7dce9;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hobby:hover {
+      transform: translateY(-5px);
+    }
+
+    /* CITA-CITA */
+    .dream-box {
+      max-width: 800px;
+      margin: auto;
+      background: #18233f;
+      color: white;
+      padding: 45px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 12px 12px 0 #f3b4cf;
+    }
+
+    .dream-box h3 {
+      color: #f5a8c9;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .dream-box p {
+      color: #d9dce6;
+    }
+
+    /* PENDIDIKAN */
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: #f0a9c7;
+    }
+
+    .education {
+      position: relative;
+      padding-left: 45px;
+      margin-bottom: 45px;
+    }
+
+    .education::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 5px;
+      width: 19px;
+      height: 19px;
+      background: #d75b91;
+      border-radius: 50%;
+      border: 4px solid #fff8fc;
+    }
+
+    .education .year {
+      color: #d75b91;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .education h3 {
+      margin: 5px 0;
+      font-size: 22px;
+    }
+
+    .education p {
+      color: #666d7e;
+    }
+
+    /* ORGANISASI */
+    .organization-container {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .organization {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #f0dce7;
+      transition: 0.3s;
+    }
+
+    .organization:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(24, 35, 63, 0.1);
+    }
+
+    .organization h3 {
+      color: #18233f;
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .organization .role {
+      color: #d75b91;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .organization p {
+      color: #666d7e;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #18233f;
+      color: white;
+      text-align: center;
+      padding: 35px;
+    }
+
+    footer span {
+      color: #f5a8c9;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .home {
+        padding-top: 120px;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .title {
+        font-size: 32px;
+      }
+
+      .biodata-item {
+        display: block;
+      }
+
+      .biodata-item strong {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+      }
+
+      .organization-container {
+        grid-template-columns: 1fr;
+      }
+
+      .dream-box {
+        box-shadow: 7px 7px 0 #f3b4cf;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <div class="logo">Vienra</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#biodata">Biodata</a></li>
+      <li><a href="#hobi">Hobi</a></li>
+      <li><a href="#cita-cita">Cita-Cita</a></li>
+      <li><a href="#pendidikan">Pendidikan</a></li>
+      <li><a href="#organisasi">Organisasi</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- HOME -->
+  <section class="home" id="home">
+
+    <div class="home-content">
+
+      <div class="welcome">
+        PERSONAL PORTFOLIO
+      </div>
+
+      <h1>
+        Halo, saya<br>
+        <span>Anira Putri Hidayat</span>
+      </h1>
+
+      <p>
+        Selamat datang di portfolio pribadi saya.
+        Kenali saya lebih jauh melalui biodata,
+        hobi, cita-cita, perjalanan pendidikan,
+        dan pengalaman organisasi saya.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- BIODATA -->
+  <section id="biodata">
+
+    <h2 class="title">
+      <span>Biodata</span> Saya
+    </h2>
+
+    <div class="biodata">
+
+      <div class="biodata-item">
+        <strong>Nama Lengkap</strong>
+        <p>Anira Putri Hidayat</p>
+      </div>
+
+      <div class="biodata-item">
+        <strong>Nama Panggilan</strong>
+        <p>Nira</p>
+      </div>
+
+      <div class="biodata-item">
+        <strong>Tempat, Tanggal Lahir</strong>
+        <p>Bandung, 10 Januari 2011</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOBI -->
+  <section id="hobi">
+
+    <h2 class="title">
+      <span>Hobi</span>
+    </h2>
+
+    <div class="hobby-container">
+
+      <div class="hobby">Fotografi</div>
+      <div class="hobby">Melukis</div>
+      <div class="hobby">Menonton Film</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CITA-CITA -->
+  <section id="cita-cita">
+
+    <h2 class="title">
+      <span>Cita-Cita</span>
+    </h2>
+
+    <div class="dream-box">
+
+      <h3>Insinyur</h3>
+
+      <p>
+        Saya bercita-cita menjadi seorang insinyur
+        dan ingin mengembangkan pengetahuan serta
+        kemampuan saya di bidang teknologi dan ilmu
+        pengetahuan.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- RIWAYAT PENDIDIKAN -->
+  <section id="pendidikan">
+
+    <h2 class="title">
+      Riwayat <span>Pendidikan</span>
+    </h2>
+
+    <div class="timeline">
+
+      <div class="education">
+
+        <div class="year">2016</div>
+
+        <h3>SDN 054 Tikukur Bandung</h3>
+
+        <p>
+          Sekolah Dasar
+        </p>
+
+      </div>
+
+
+      <div class="education">
+
+        <div class="year">2023</div>
+
+        <h3>SMPN 35 Bandung</h3>
+
+        <p>
+          Sekolah Menengah Pertama
+        </p>
+
+      </div>
+
+
+      <div class="education">
+
+        <div class="year">2026</div>
+
+        <h3>SMAN 19 Bandung</h3>
+
+        <p>
+          Sekolah Menengah Atas
+        </p>
+
+      </div>
+
+
+      <div class="education">
+
+        <div class="year">2029</div>
+
+        <h3>Institut Teknologi Bandung</h3>
+
+        <p>
+          Fakultas Teknik Pertambangan dan Perminyakan (FTTM)
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PENGALAMAN ORGANISASI -->
+  <section id="organisasi">
+
+    <h2 class="title">
+      Pengalaman <span>Organisasi</span>
+    </h2>
+
+    <div class="organization-container">
+
+
+      <div class="organization">
+
+        <h3>OSIS</h3>
+
+        <div class="role">
+          Ketua Divisi 9 (TIK) • 2024–2025
+        </div>
+
+        <p>
+          Berperan sebagai Ketua Divisi 9 bidang
+          Teknologi Informasi dan Komunikasi.
+        </p>
+
+      </div>
+
+
+      <div class="organization">
+
+        <h3>MPK</h3>
+
+        <div class="role">
+          Sekretaris • 2025–2026
+        </div>
+
+        <p>
+          Berperan sebagai sekretaris dalam
+          organisasi MPK.
+        </p>
+
+      </div>
+
+
+      <div class="organization">
+
+        <h3>Duta Anti Bullying</h3>
+
+        <div class="role">
+          Bendahara • 2024–2025
+        </div>
+
+        <p>
+          Berperan sebagai bendahara dalam
+          organisasi Duta Anti Bullying.
+        </p>
+
+      </div>
+
+
+      <div class="organization">
+
+        <h3>Duta Anti Narkoba</h3>
+
+        <div class="role">
+          2024
+        </div>
+
+        <p>
+          Berpartisipasi dalam kegiatan Duta
+          Anti Narkoba.
+        </p>
+
+      </div>
+
+
+      <div class="organization">
+
+        <h3>Ketua Pelaksana Acara</h3>
+
+        <div class="role">
+          2025
+        </div>
+
+        <p>
+          Bertanggung jawab dalam mengoordinasikan
+          dan melaksanakan sebuah kegiatan/acara.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      Portfolio pribadi <span>Anira Putri Hidayat</span>
+    </p>
+
+    <p>
+      © 2026
+    </p>
+
+  </footer>
+
+</body>
+</html>
