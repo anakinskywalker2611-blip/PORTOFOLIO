@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio | Anira Putri Hidayat </title>
+  <title>Portfolio | Anira Putri Hidayat</title>
 
   <style>
     * {
@@ -21,7 +21,10 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR */
+    /* =========================
+       NAVBAR
+    ========================= */
+
     nav {
       position: fixed;
       top: 0;
@@ -59,18 +62,22 @@
       color: #d75b91;
     }
 
-    /* HOME */
+
+    /* =========================
+       HOME
+    ========================= */
+
     .home {
       min-height: 100vh;
       padding: 130px 8% 80px;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      gap: 90px;
     }
 
     .home-content {
-      max-width: 850px;
+      max-width: 650px;
     }
 
     .welcome {
@@ -82,7 +89,7 @@
     }
 
     .home h1 {
-      font-size: clamp(45px, 8vw, 80px);
+      font-size: clamp(45px, 7vw, 80px);
       line-height: 1;
       margin-bottom: 25px;
     }
@@ -94,11 +101,66 @@
     .home p {
       color: #666d7e;
       font-size: 17px;
-      max-width: 650px;
-      margin: auto;
+      max-width: 600px;
     }
 
-    /* GENERAL SECTION */
+
+    /* =========================
+       PHOTO FRAME
+    ========================= */
+
+    .photo-frame {
+      width: 300px;
+      background: white;
+      padding: 15px 15px 25px;
+      box-shadow: 8px 10px 25px rgba(24, 35, 63, 0.15);
+      transform: rotate(3deg);
+      flex-shrink: 0;
+      transition: 0.3s;
+    }
+
+    .photo-frame:hover {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 340px;
+      background: #f7dce9;
+      overflow: hidden;
+    }
+
+    .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .photo-caption span {
+      font-family: cursive;
+      font-size: 20px;
+      color: #18233f;
+    }
+
+    .photo-caption small {
+      color: #999;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
     section {
       padding: 90px 8%;
     }
@@ -113,7 +175,11 @@
       color: #d75b91;
     }
 
-    /* BIODATA */
+
+    /* =========================
+       BIODATA
+    ========================= */
+
     .biodata {
       max-width: 800px;
       margin: auto;
@@ -139,7 +205,11 @@
       color: #d75b91;
     }
 
-    /* HOBI */
+
+    /* =========================
+       HOBI
+    ========================= */
+
     .hobby-container {
       max-width: 800px;
       margin: auto;
@@ -159,9 +229,14 @@
 
     .hobby:hover {
       transform: translateY(-5px);
+      background: #f3c6db;
     }
 
-    /* CITA-CITA */
+
+    /* =========================
+       CITA-CITA
+    ========================= */
+
     .dream-box {
       max-width: 800px;
       margin: auto;
@@ -183,7 +258,11 @@
       color: #d9dce6;
     }
 
-    /* PENDIDIKAN */
+
+    /* =========================
+       RIWAYAT PENDIDIKAN
+    ========================= */
+
     .timeline {
       max-width: 800px;
       margin: auto;
@@ -233,7 +312,11 @@
       color: #666d7e;
     }
 
-    /* ORGANISASI */
+
+    /* =========================
+       PENGALAMAN ORGANISASI
+    ========================= */
+
     .organization-container {
       max-width: 950px;
       margin: auto;
@@ -271,7 +354,11 @@
       color: #666d7e;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: #18233f;
       color: white;
@@ -283,8 +370,12 @@
       color: #f5a8c9;
     }
 
-    /* MOBILE */
-    @media (max-width: 700px) {
+
+    /* =========================
+       RESPONSIVE HP
+    ========================= */
+
+    @media (max-width: 800px) {
 
       nav {
         padding: 15px 5%;
@@ -295,7 +386,22 @@
       }
 
       .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
         padding-top: 120px;
+      }
+
+      .home p {
+        margin: auto;
+      }
+
+      .photo-frame {
+        width: 260px;
+      }
+
+      .photo-placeholder {
+        height: 300px;
       }
 
       section {
@@ -327,12 +433,16 @@
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVBAR -->
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
   <nav>
 
-    <div class="logo">Nira!</div>
+    <div class="logo">Anira</div>
 
     <ul>
       <li><a href="#home">Home</a></li>
@@ -346,7 +456,10 @@
   </nav>
 
 
-  <!-- HOME -->
+  <!-- =========================
+       HOME
+  ========================= -->
+
   <section class="home" id="home">
 
     <div class="home-content">
@@ -369,10 +482,34 @@
 
     </div>
 
+
+    <!-- FOTO -->
+    <div class="photo-frame">
+
+      <div class="photo-placeholder">
+
+        <!--
+        
+        -->
+
+        <img src="foto.jpg" alt="Foto Anira">
+
+      </div>
+
+      <div class="photo-caption">
+        <span>Anira ♡</span>
+        <small>personal portfolio</small>
+      </div>
+
+    </div>
+
   </section>
 
 
-  <!-- BIODATA -->
+  <!-- =========================
+       BIODATA
+  ========================= -->
+
   <section id="biodata">
 
     <h2 class="title">
@@ -401,7 +538,10 @@
   </section>
 
 
-  <!-- HOBI -->
+  <!-- =========================
+       HOBI
+  ========================= -->
+
   <section id="hobi">
 
     <h2 class="title">
@@ -419,7 +559,10 @@
   </section>
 
 
-  <!-- CITA-CITA -->
+  <!-- =========================
+       CITA-CITA
+  ========================= -->
+
   <section id="cita-cita">
 
     <h2 class="title">
@@ -442,7 +585,10 @@
   </section>
 
 
-  <!-- RIWAYAT PENDIDIKAN -->
+  <!-- =========================
+       RIWAYAT PENDIDIKAN
+  ========================= -->
+
   <section id="pendidikan">
 
     <h2 class="title">
@@ -451,11 +597,16 @@
 
     <div class="timeline">
 
+
       <div class="education">
 
-        <div class="year">2016</div>
+        <div class="year">
+          2016
+        </div>
 
-        <h3>SDN 054 Tikukur Bandung</h3>
+        <h3>
+          SDN 054 Tikukur Bandung
+        </h3>
 
         <p>
           Sekolah Dasar
@@ -466,9 +617,13 @@
 
       <div class="education">
 
-        <div class="year">2023</div>
+        <div class="year">
+          2023
+        </div>
 
-        <h3>SMPN 35 Bandung</h3>
+        <h3>
+          SMP Negeri 35 Bandung
+        </h3>
 
         <p>
           Sekolah Menengah Pertama
@@ -479,9 +634,13 @@
 
       <div class="education">
 
-        <div class="year">2026</div>
+        <div class="year">
+          2026
+        </div>
 
-        <h3>SMAN 19 Bandung</h3>
+        <h3>
+          SMA Negeri 19 Bandung
+        </h3>
 
         <p>
           Sekolah Menengah Atas
@@ -492,22 +651,31 @@
 
       <div class="education">
 
-        <div class="year">2029</div>
+        <div class="year">
+          2029
+        </div>
 
-        <h3>Institut Teknologi Bandung</h3>
+        <h3>
+          Institut Teknologi Bandung
+        </h3>
 
         <p>
-          Fakultas Teknik Pertambangan dan Perminyakan (FTTM)
+          Fakultas Teknik Pertambangan dan Perminyakan
+          (FTTM)
         </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- PENGALAMAN ORGANISASI -->
+  <!-- =========================
+       PENGALAMAN ORGANISASI
+  ========================= -->
+
   <section id="organisasi">
 
     <h2 class="title">
@@ -517,25 +685,34 @@
     <div class="organization-container">
 
 
+      <!-- OSIS -->
+
       <div class="organization">
 
-        <h3>OSIS</h3>
+        <h3>
+          OSIS
+        </h3>
 
         <div class="role">
           Ketua Divisi 9 (TIK) • 2024–2025
         </div>
 
         <p>
-          Berperan sebagai Ketua Divisi 9 bidang
-          Teknologi Informasi dan Komunikasi.
+          Berperan sebagai Ketua Divisi 9
+          bidang Teknologi Informasi dan
+          Komunikasi.
         </p>
 
       </div>
 
 
+      <!-- MPK -->
+
       <div class="organization">
 
-        <h3>MPK</h3>
+        <h3>
+          MPK
+        </h3>
 
         <div class="role">
           Sekretaris • 2025–2026
@@ -549,9 +726,13 @@
       </div>
 
 
+      <!-- DUTA ANTI BULLYING -->
+
       <div class="organization">
 
-        <h3>Duta Anti Bullying</h3>
+        <h3>
+          Duta Anti Bullying
+        </h3>
 
         <div class="role">
           Bendahara • 2024–2025
@@ -559,39 +740,48 @@
 
         <p>
           Berperan sebagai bendahara dalam
-          organisasi Duta Anti Bullying.
+          kegiatan Duta Anti Bullying.
         </p>
 
       </div>
 
 
+      <!-- DUTA ANTI NARKOBA -->
+
       <div class="organization">
 
-        <h3>Duta Anti Narkoba</h3>
+        <h3>
+          Duta Anti Narkoba
+        </h3>
 
         <div class="role">
           2024
         </div>
 
         <p>
-          Berpartisipasi dalam kegiatan Duta
-          Anti Narkoba.
+          Berpartisipasi dalam kegiatan
+          Duta Anti Narkoba.
         </p>
 
       </div>
 
 
+      <!-- KETUA PELAKSANA -->
+
       <div class="organization">
 
-        <h3>Ketua Pelaksana Acara</h3>
+        <h3>
+          Ketua Pelaksana Acara
+        </h3>
 
         <div class="role">
           2025
         </div>
 
         <p>
-          Bertanggung jawab dalam mengoordinasikan
-          dan melaksanakan sebuah kegiatan/acara.
+          Bertanggung jawab dalam
+          mengoordinasikan dan melaksanakan
+          sebuah kegiatan atau acara.
         </p>
 
       </div>
@@ -602,11 +792,15 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
     <p>
-      Portfolio pribadi <span>Anira Putri Hidayat</span>
+      Portfolio pribadi
+      <span>Anira Putri Hidayat</span>
     </p>
 
     <p>
@@ -614,6 +808,7 @@
     </p>
 
   </footer>
+
 
 </body>
 </html>
